@@ -1,0 +1,25 @@
+{
+  "name": "mockai",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20241022.0",
+    "@types/showdown": "^2.0.6",
+    "typescript": "5.6.3",
+    "vitest": "2.1.4",
+    "wrangler": "2.8.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@cloudflare/itty-router-openapi": "^1.1.1",
+    "chanfana": "^2.0.5",
+    "itty-router": "^5.0.18",
+    "openai": "^4.68.4",
+    "showdown": "^2.1.0",
+    "zod": "^3.23.8"
+  }
+}
