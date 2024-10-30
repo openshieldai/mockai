@@ -4,7 +4,7 @@ This is a mock service for multiple AI services.
 
 ## Documentation
 
-[Documentation](https://mockai.openshield.ai)
+[Documentation](https://mockai.openshield.ai/docs)
 
 ## OpenAI API
 
