@@ -11,8 +11,8 @@
   "private": true,
   "scripts": {
     "start": "wrangler dev",
-    "deploy": "wrangler publish",
-    "test": "vitest"
+    "deploy": "wrangler publish -e production",
+    "test": "ENV=test npx vitest run"
   },
   "dependencies": {
     "@cloudflare/itty-router-openapi": "^1.1.1",

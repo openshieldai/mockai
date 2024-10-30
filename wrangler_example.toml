@@ -13,6 +13,7 @@ simple = { limit = 100, period = 60 }
 MAXIMUM_STREAM_DELAY = 5000
 REPO_URL = ""
 RATELIMITING_ENABLED = true
+ENV = "development"
 
 [env.production]
 workers_dev = false
@@ -27,6 +28,7 @@ simple = { limit = 100, period = 60 }
 MAXIMUM_STREAM_DELAY = 5000
 REPO_URL = ""
 RATELIMITING_ENABLED = true
+ENV = "production"
 
 routes = [
     { pattern = "", custom_domain = "" },

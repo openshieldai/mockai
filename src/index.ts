@@ -4,6 +4,7 @@ export interface Env {
   DOC_URL: string;
   RATELIMITING_ENABLED: boolean;
   RATELIMITER: any;
+  ENV: string;
 }
 
 
