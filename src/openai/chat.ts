@@ -120,6 +120,7 @@ export class OpenAIChat extends OpenAPIRoute {
     tags: ['openai'],
     request: {
       body: {
+        required: true,
         content: {
           'application/json': {
             schema: z.object({

@@ -52,6 +52,7 @@ export class OpenAIImage extends OpenAPIRoute {
     contentType: 'application/json',
     request: {
       body: {
+        required: true,
         content: {
           'application/json': {
             schema: z.object({
