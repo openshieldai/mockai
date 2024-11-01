@@ -12,7 +12,8 @@
   "scripts": {
     "start": "wrangler dev",
     "deploy": "wrangler publish -e production",
-    "test": "ENV=test npx vitest run"
+    "test": "ENV=test npx vitest run",
+    "deploy-static": "wrangler r2 object put ${BUCKET_NAME}/README.md --file=README.md"
   },
   "dependencies": {
     "@cloudflare/itty-router-openapi": "^1.1.1",
