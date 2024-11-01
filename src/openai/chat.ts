@@ -136,7 +136,8 @@ export class OpenAIChat extends OpenAPIRoute {
     },
     responses: {
       200: {
-        description: 'Chat Completion response',
+        description:
+          'Given a list of messages comprising a conversation, the model will return a response.',
         contentType: 'application/json',
         content: {
           'application/json': {

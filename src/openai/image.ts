@@ -66,7 +66,8 @@ export class OpenAIImage extends OpenAPIRoute {
     },
     responses: {
       200: {
-        description: 'Chat Completion response',
+        description:
+          'Given a prompt and/or an input image, the model will generate a new image',
         contentType: 'application/json',
         content: {
           'application/json': {
