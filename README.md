@@ -27,7 +27,7 @@ async function main() {
   // @ts-ignore
   const completion = await openShiedClient.chat.completions.create({
     stream: true,
-    streamDelay: 5000,
+    requestDelay: 5000,
     model: 'gpt-4',
     messages: [
       { role: 'system', content: 'You are a helpful assistant.' },

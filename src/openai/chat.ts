@@ -6,17 +6,17 @@ import { z } from 'zod';
 import { ratelimit } from '../utils/ratelimit';
 
 export async function post (request: Request, env: Env, ctx: ExecutionContext) {
-  const { stream, streamDelay = 0, model } = (await request.json()) as {
+  const { stream, requestDelay = 0, model } = (await request.json()) as {
     stream: boolean;
-    streamDelay?: number;
+    requestDelay?: number;
     model: string;
   };
 
-  if (streamDelay > env.MAXIMUM_STREAM_DELAY) {
+  if (requestDelay > env.MAXIMUM_REQUEST_DELAY) {
     return new Response('Stream delay is too long', { status: 400 });
   }
 
-  await delay(streamDelay);
+  await delay(requestDelay);
 
   const content = [
     "As an AI, I don't have personal beliefs or feelings. ",
@@ -124,7 +124,7 @@ export class OpenAIChat extends OpenAPIRoute {
           'application/json': {
             schema: z.object({
               stream: z.boolean(),
-              streamDelay: z.number().optional(),
+              requestDelay: z.number().optional(),
               messages: z.array(
                 z.object({ role: z.string(), content: z.string() })
               ),

@@ -1,5 +1,5 @@
 export interface Env {
-  MAXIMUM_STREAM_DELAY: number;
+  MAXIMUM_REQUEST_DELAY: number;
   UNSPLASH_ACCESS_KEY: string;
   DOC_URL: string;
   RATELIMITING_ENABLED: boolean;
