@@ -28,7 +28,7 @@ const openAIClient = new OpenAI({
 
 async function main() {
   // @ts-ignore
-  const completion = await openShiedClient.chat.completions.create({
+  const completion = await openAIClient.chat.completions.create({
     stream: true,
     requestDelay: 5000,
     model: 'gpt-4',
