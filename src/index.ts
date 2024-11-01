@@ -5,6 +5,7 @@ export interface Env {
   RATELIMITING_ENABLED: boolean;
   RATELIMITER: any;
   ENV: string;
+  MAX_COMPLETION_TOKENS: number;
 }
 
 
@@ -20,7 +21,7 @@ const publicRouter = fromIttyRouter(router, {
     info: {
       title: 'MockAI API',
       version: '1.0',
-      description: '',
+      description: 'Mock OpenAI API',
     },
   },
 });

@@ -3,6 +3,10 @@ main = "src/index.ts"
 compatibility_date = "2024-10-22"
 compatibility_flags = ["nodejs_compat"]
 
+[[rules]]
+globs = ["**/*.wasm"]
+type = "CompiledWasm"
+
 [[unsafe.bindings]]
 name = "RATELIMITER"
 type = "ratelimit"
@@ -11,6 +15,7 @@ simple = { limit = 100, period = 60 }
 
 [vars]
 MAXIMUM_REQUEST_DELAY = 5000
+MAX_COMPLETION_TOKENS = 9999
 REPO_URL = ""
 RATELIMITING_ENABLED = true
 ENV = "development"
@@ -26,6 +31,7 @@ simple = { limit = 100, period = 60 }
 
 [env.production.vars]
 MAXIMUM_REQUEST_DELAY = 5000
+MAX_COMPLETION_TOKENS = 9999
 REPO_URL = ""
 RATELIMITING_ENABLED = true
 ENV = "production"

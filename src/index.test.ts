@@ -64,7 +64,8 @@ describe('Chat Endpoint', () => {
         }
       }
 
-      expect(fullText).toContain('data: [DONE]');
+      // Check if the fullText contains the expected end message
+      expect(fullText).toContain('finish_reason":"stop"');
     }
   }, 30000);
 
@@ -83,7 +84,6 @@ describe('Chat Endpoint', () => {
         const json = (await resp.json()) as {
           data: { url: string }[];
         };
-        console.log(json);
 
         expect(json).toHaveProperty('data');
         expect(json.data.length).toBeGreaterThan(0);

@@ -23,6 +23,9 @@ importers:
       showdown:
         specifier: ^2.1.0
         version: 2.1.0
+      tiktoken:
+        specifier: ^1.0.17
+        version: 1.0.17
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -986,6 +989,9 @@ packages:
   strip-final-newline@3.0.0:
     resolution: {integrity: sha512-dOESqjYr96iWYylGObzd39EuNTa5VJxyvVAEm5Jnh7KGo75V43Hk1odPQkNDyXNmUR6k+gEiDVXnjB8HJ3crXw==}
     engines: {node: '>=12'}
+
+  tiktoken@1.0.17:
+    resolution: {integrity: sha512-UuFHqpy/DxOfNiC3otsqbx3oS6jr5uKdQhB/CvDEroZQbVHt+qAK+4JbIooabUWKU9g6PpsFylNu9Wcg4MxSGA==}
 
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
@@ -1993,6 +1999,8 @@ snapshots:
   streamsearch@1.1.0: {}
 
   strip-final-newline@3.0.0: {}
+
+  tiktoken@1.0.17: {}
 
   tinybench@2.9.0: {}
 
