@@ -2,7 +2,7 @@ import OpenAI from 'openai';
 
 const openAIClient = new OpenAI({
   baseURL: 'https://mockai.openshield.ai/openai/v1',
-  apiKey: '',
+  apiKey: 'openshield',
 });
 
 async function main() {

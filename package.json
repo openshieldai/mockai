@@ -2,8 +2,8 @@
   "name": "mockai",
   "version": "0.0.0",
   "devDependencies": {
-    "@types/node": "22.8.6",
     "@cloudflare/workers-types": "4.20241022.0",
+    "@types/node": "22.8.6",
     "@types/showdown": "^2.0.6",
     "typescript": "5.6.3",
     "vitest": "2.1.4",
@@ -17,6 +17,7 @@
     "deploy-static": "wrangler r2 object put ${BUCKET_NAME}/README.md --file=README.md"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.31.0",
     "@cloudflare/itty-router-openapi": "^1.1.1",
     "chanfana": "^2.0.5",
     "itty-router": "^5.0.18",

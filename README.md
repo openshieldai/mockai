@@ -14,6 +14,7 @@ This is a mock service for multiple AI services.
 - `/openai/v1/images/generations`
 - `/openai/v1/models`
 - `/openai/v1/models/:id`
+- `/anthropic/v1/messages` (streaming supported)
 
 ### Echo mode
 
@@ -26,8 +27,19 @@ If you set `answer` in the request body, the service will echo the answer back.
 
 ### Example code
 
+#### OpenAI
+
 ```bash
 cd examples/openai
+pnpm install
+pnpm run build
+pnpm run start
+```
+
+#### Anthropic
+
+```bash
+cd examples/anthropic
 pnpm install
 pnpm run build
 pnpm run start

@@ -181,7 +181,7 @@ export class OpenAIChat extends OpenAPIRoute {
         content: {
           'application/json': {
             schema: z.object({
-              stream: z.boolean(),
+              stream: z.boolean().optional(),
               request_delay: z.number().optional(),
               max_completion_tokens: z.number().optional(),
               answer: z.string().optional(),

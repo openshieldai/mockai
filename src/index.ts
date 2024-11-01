@@ -11,6 +11,7 @@ export interface Env {
 
 import { AutoRouter, withParams } from 'itty-router'
 import { OpenAIChat, OpenAIImage, OpenAIModels, OpenAIModel } from './openai/init';
+import { AnthropicChat } from './anthropic/init';
 import { fromIttyRouter } from 'chanfana';
 import { RootPage } from './utils/root';
 
@@ -34,5 +35,6 @@ publicRouter.post('/openai/v1/chat/completions', OpenAIChat);
 publicRouter.get('/openai/v1/models', OpenAIModels);
 publicRouter.get('/openai/v1/models/:id', withParams, OpenAIModel);
 publicRouter.post('/openai/v1/images/generations', OpenAIImage);
+publicRouter.post('/anthropic/v1/messages', AnthropicChat);
 
 export default router;
