@@ -8,8 +8,8 @@ export interface Env {
 }
 
 
-import { AutoRouter } from 'itty-router'
-import { OpenAIChat, OpenAIImage } from './openai/init';
+import { AutoRouter, withParams } from 'itty-router'
+import { OpenAIChat, OpenAIImage, OpenAIModels, OpenAIModel } from './openai/init';
 import { fromIttyRouter } from 'chanfana';
 import { RootPage } from './utils/root';
 
@@ -30,6 +30,8 @@ const publicRouter = fromIttyRouter(router, {
 router.get('/', RootPage);
 
 publicRouter.post('/openai/v1/chat/completions', OpenAIChat);
+publicRouter.get('/openai/v1/models', OpenAIModels);
+publicRouter.get('/openai/v1/models/:id', withParams, OpenAIModel);
 publicRouter.post('/openai/v1/images/generations', OpenAIImage);
 
 export default router;

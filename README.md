@@ -10,8 +10,11 @@ This is a mock service for multiple AI services.
 
 ### Supported endpoints:
 
-- [Chat-Completions](https://mockai.openshield.ai/openai/v1/completions)
-- [Image-Creation](https://mockai.openshield.ai/openai/v1/images/generations)
+- /openai/v1/chat/completions
+- /openai/v1/images/generations
+- /openai/v1/models
+- /openai/v1/models/:id
+
 
 ### Example code
 

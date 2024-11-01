@@ -90,5 +90,48 @@ describe('Chat Endpoint', () => {
       }
     }, 15000);
   });
+
+  describe("Models Endpoint", () => {
+    it("should return a list of models", async () => {
+      const resp = await worker.fetch("/openai/v1/models", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (resp) {
+        expect(resp.status).toBe(200);
+        const json = (await resp.json()) as {
+          object: string;
+          data: { id: string; owned_by: string; created: number; object: string }[];
+        };
+
+        expect(json).toHaveProperty('data');
+        expect(json.data.length).toBeGreaterThan(0);
+      }
+    }, 15000);
+  });
+
+  describe("Model Endpoint", () => {
+    it("should return details of a specific model", async () => {
+      const modelId = "gpt-4o"; // Replace with a valid model ID
+      const resp = await worker.fetch(`/openai/v1/models/${modelId}`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (resp) {
+        expect(resp.status).toBe(200);
+        const json = (await resp.json()) as {
+          id: string;
+          owned_by: string;
+          created: number;
+        };
+
+        expect(json).toHaveProperty('id', modelId);
+        expect(json).toHaveProperty('owned_by');
+        expect(json).toHaveProperty('created');
+      }
+    }, 15000);
+  });
 });
 
