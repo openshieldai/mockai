@@ -7,6 +7,10 @@ compatibility_flags = ["nodejs_compat"]
 globs = ["**/*.wasm"]
 type = "CompiledWasm"
 
+[observability]
+enabled = true
+head_sampling_rate = 1
+
 [[unsafe.bindings]]
 name = "RATELIMITER"
 type = "ratelimit"
