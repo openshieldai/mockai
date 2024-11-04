@@ -198,7 +198,7 @@ export class AnthropicChat extends OpenAPIRoute {
         'x-api-key': z.string(),
         'anthropic-version': z.string(),
         'anthropic-beta': z.string().optional(),
-        'anthropic-stream': z.boolean().optional(),
+        'anthropic-stream': z.string().optional(),
       }),
       body: {
         required: true,
